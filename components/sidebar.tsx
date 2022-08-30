@@ -19,37 +19,6 @@ import {
 } from 'react-icons/md'
 import { usePlaylist } from '../lib/hooks'
 
-const navMenu = [
-  {
-    name: 'Home',
-    icon: MdHome,
-    route: '/',
-  },
-  {
-    name: 'Search',
-    icon: MdSearch,
-    route: '/search',
-  },
-  {
-    name: 'Your Library',
-    icon: MdLibraryMusic,
-    route: '/library',
-  },
-]
-
-const musicMenu = [
-  {
-    name: 'Create Playlist',
-    icon: MdPlaylistAdd,
-    route: '/',
-  },
-  {
-    name: 'Favorites',
-    icon: MdFavorite,
-    route: '/favorites',
-  },
-]
-
 // const playlists = new Array(30).fill(1).map((_, i) => `Playlist ${i + 1}`)
 
 const Sidebar = () => {
@@ -108,8 +77,8 @@ const Sidebar = () => {
         </Box>
         <Divider color="gray.800" />
         <Box height="66%" overflowY="auto" paddingY="20px">
-          <List spaceing={2}>
-            {playlists.map((playlist) => (
+          {/* <List spaceing={2}>
+            {playlists?.map((playlist) => (
               <ListItem paddingX="20px" key={playlist.id}>
                 <LinkBox>
                   <NextLink
@@ -124,7 +93,7 @@ const Sidebar = () => {
                 </LinkBox>
               </ListItem>
             ))}
-          </List>
+          </List> */}
         </Box>
       </Box>
     </Box>
@@ -132,3 +101,34 @@ const Sidebar = () => {
 }
 
 export default Sidebar
+
+const navMenu = [
+  {
+    name: 'Home',
+    icon: MdHome,
+    route: '/',
+  },
+  {
+    name: 'Search',
+    icon: MdSearch,
+    route: '/search',
+  },
+  {
+    name: 'Your Library',
+    icon: MdLibraryMusic,
+    route: '/library',
+  },
+]
+
+const musicMenu = [
+  {
+    name: 'Create Playlist',
+    icon: MdPlaylistAdd,
+    route: '/',
+  },
+  {
+    name: 'Favorites',
+    icon: MdFavorite,
+    route: '/favorites',
+  },
+]

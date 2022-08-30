@@ -33,6 +33,7 @@ const theme = extendTheme({
 })
 
 const MyApp = ({ Component, pageProps }) => {
+  console.log('Component.authPage', Component)
   return (
     <ChakraProvider theme={theme}>
       <StoreProvider store={store}>
